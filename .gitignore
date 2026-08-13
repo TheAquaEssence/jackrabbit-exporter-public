@@ -1,0 +1,2 @@
+# Deterministic release artifacts are generated locally or in CI.
+dist/

@@ -9,6 +9,10 @@ This directory is a standalone extension project. It has no runtime dependency
 on the Aqua Essence application repository. The repositories integrate only
 through the format-version-1 file contract described below.
 
+Version 1.1.0 is the production baseline for internal Chrome and Edge use.
+Firefox packaging remains available from the same source, but live Firefox
+validation was explicitly waived for the current company rollout.
+
 ## Install from source
 
 ### Chrome or Edge
@@ -38,8 +42,8 @@ same source package works in all three browsers.
 3. Use the blue **Export for Aqua Essence** control added to the page.
 4. Wait for any bulk export to finish.
 5. Open the extension popup and select **Download Aqua Essence bundle**.
-6. In Aqua Essence desktop, select **Import export** and choose the downloaded
-   `aqua_essence_jackrabbit_export.json` file.
+6. In an Aqua Essence desktop build that implements format version 1, choose
+   the downloaded `aqua_essence_jackrabbit_export.json` file.
 7. Select **Clear buffer** when the captured data is no longer needed.
 
 Students and classes are the only required datasets for bundle generation.
@@ -108,9 +112,9 @@ Jackrabbit list layouts are account-configurable. If a required ID cannot be
 read, capture is blocked or the popup reports the incomplete extraction rather
 than substituting data.
 
-Potential enhancements that are deliberately outside the production baseline,
-including pre-fetch historical-class filtering, are tracked in
-[ROADMAP.md](ROADMAP.md).
+The exporter side of the desktop handoff is complete. Desktop import behavior
+belongs in the independent Aqua Essence repository and must consume only the
+versioned downloaded file contract documented here.
 
 ## Development
 

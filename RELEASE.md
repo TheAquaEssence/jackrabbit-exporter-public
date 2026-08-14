@@ -13,8 +13,8 @@ submission target explicit.
 - [ ] Confirm both ZIP files and `SHA256SUMS.txt` exist in `dist/`.
 - [ ] Confirm the two ZIP hashes match the checksum file and the recorded
       release notes.
-- [ ] Confirm the accepted Edge validation record and deferred non-blocking
-      checks in `MANUAL_VALIDATION.md` are still accurate.
+- [ ] Confirm the accepted Chrome and Edge validation record and the explicit
+      Firefox waiver in `MANUAL_VALIDATION.md` are still accurate.
 - [ ] Review `RELEASE_NOTES_1.1.0.md` for accuracy.
 - [ ] Obtain explicit approval before committing, tagging, pushing, signing, or
       publishing.

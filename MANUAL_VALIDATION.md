@@ -89,11 +89,12 @@ pass/fail results, browser versions, page type, and sanitized error summaries.
 
 ## Browser matrix
 
-- [ ] Repeat install, capture, one-click bundle download, and clear-buffer smoke
+- [x] Repeat install, capture, one-click bundle download, and clear-buffer smoke
       tests in current Chrome.
-- [ ] Repeat the same smoke tests in current Edge.
+- [x] Repeat the same smoke tests in current Edge.
 - [ ] Repeat the same smoke tests in current Firefox, including temporary add-on
-      reload behavior and the event-page background fallback.
+      reload behavior and the event-page background fallback. This check was
+      explicitly waived for the current internal Chrome/Edge rollout.
 - [ ] Record only browser/version and pass/fail outcomes; do not record account
       names, URLs with xIDs, row counts that are operationally sensitive, or
       extracted field values.
@@ -101,7 +102,8 @@ pass/fail results, browser versions, page type, and sanitized error summaries.
 ## Current validation record
 
 The following privacy-safe results were reported and accepted for the 1.1.0
-production baseline on August 13, 2026. The exact Edge version was not recorded.
+production baseline on August 13, 2026. Exact browser versions were not
+recorded.
 
 - Edge: student-list recapture deduplicated student rows and the corrected
   student-page counter behavior was accepted.
@@ -111,11 +113,16 @@ production baseline on August 13, 2026. The exact Edge version was not recorded.
   warnings.
 - Edge: the remaining bundle, staff/pairing, stopping, clearing, and desktop
   handoff checks were accepted.
+- Chrome: installation, capture, one-click bundle download, and clear-buffer
+  smoke testing was accepted.
+- Chrome: live multi-instructor capture confirmed that each instructor
+  assignment receives a distinct row while retaining the same original numeric
+  Class ID. Exact Class ID/instructor ID pairs remained deduplicated.
+- Chrome: incomplete class extraction was surfaced visibly when the source did
+  not expose an instructor ID or schedule time.
+- Firefox: live smoke testing was explicitly waived by the project owner for
+  the current internal Chrome/Edge rollout. The Firefox package remains
+  generated but is not represented as live-validated.
 
-The production baseline is considered ready. These remaining checks are
-explicitly deferred as non-blocking follow-up validation:
-
-- Verify original Class ID preservation on a live multi-instructor class when
-  one becomes available.
-- Run installation, capture, bundle-download, and clear-buffer smoke tests in
-  Chrome and Firefox.
+The version 1.1.0 exporter production baseline is accepted. No blocking manual
+exporter validation items remain for the approved Chrome and Edge rollout.

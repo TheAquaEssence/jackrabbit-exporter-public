@@ -12,5 +12,7 @@ directly and provide only the minimum synthetic reproduction needed.
 
 ## Supported version
 
-Only the latest version on the default branch is supported during initial
-development. No browser-store release is currently supported.
+Version 1.1.0 on the default branch is the supported production baseline for
+internal Chrome and Edge distribution. A Firefox package is generated from the
+same source but has not received live validation for the current rollout. No
+public browser-store release is currently supported.

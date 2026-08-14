@@ -28,7 +28,8 @@ hardens extraction, storage, privacy, and release validation.
 ## Compatibility
 
 - Chrome and Edge 121 or newer.
-- Firefox 121 or newer.
+- Firefox 121 or newer at the manifest/package level; live Firefox validation
+  was waived for the current internal Chrome/Edge rollout.
 - Aqua Essence bundle contract format version `1`.
 - Existing individual CSV download actions remain available.
 
@@ -40,20 +41,16 @@ hardens extraction, storage, privacy, and release validation.
 - Edge live validation was accepted for the production baseline, including
   student/class capture, staff and pairings, one-click desktop handoff, stopping,
   clearing, and deduplication.
+- Chrome live validation was accepted for installation, capture, one-click
+  bundle download, clearing, and numeric xID preservation.
+- A live multi-instructor capture confirmed distinct instructor rows retain the
+  same original numeric Class ID without duplicate Class ID/instructor ID pairs.
+- Incomplete class extraction produced a visible warning instead of invented
+  instructor or schedule data.
+- Firefox live smoke testing was explicitly waived by the project owner.
 - Prepared artifact SHA-256 for both target ZIP files:
 
   `5fc906146a547ccd0de741c7c3e2913bdd5f057c7d6942e5928f6ba20690e439`
 
 Re-run `npm run release:check` immediately before release and update this hash if
 the source changes.
-
-## Deferred non-blocking validation
-
-- Verify original Class ID preservation against a live multi-instructor class
-  when one becomes available.
-- Run smoke tests in Chrome and Firefox.
-
-## Deferred features
-
-Historical-pairing class/session/status filtering remains outside the 1.1.0
-production scope and is tracked in `ROADMAP.md`.

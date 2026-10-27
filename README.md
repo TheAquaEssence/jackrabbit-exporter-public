@@ -5,6 +5,20 @@ exports Jackrabbit Class records as CSV files compatible with Aqua Essence.
 It can export students, classes, staff, and historical swimmer/instructor
 pairings in a single versioned handoff file.
 
+## Start here
+
+**[Open the setup and user manual](docs/USER_GUIDE.md)**
+
+New to this tool or GitHub? Click the link above to read the instructions and
+see screenshots. You do not need to open any code files.
+
+1. In the manual, click **Step 1 — Get the exporter from GitHub**.
+2. Follow the download instructions, then click **Next — Install in Chrome or Edge**.
+3. Continue through the capture and download steps in order.
+
+Prefer a copy to print? **[Open the printable manual](docs/manual/Jackrabbit%20Exporter%20Manual.pdf)**.
+If GitHub shows a file preview, use its download icon to save the PDF.
+
 This directory is a standalone extension project. It has no runtime dependency
 on the Aqua Essence application repository. The repositories integrate only
 through the format-version-1 file contract described below.
